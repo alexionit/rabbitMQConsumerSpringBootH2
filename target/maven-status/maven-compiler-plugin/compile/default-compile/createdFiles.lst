@@ -1,0 +1,7 @@
+com\rabbit\consumer\serviceDAO\MessageService.class
+com\rabbit\consumer\interfaceDAO\MessageRepo.class
+com\rabbit\consumer\RabbitRunConsumeMq.class
+com\rabbit\consumer\model\Message.class
+com\rabbit\consumer\service\RabbitConsumer.class
+com\rabbit\consumer\RabbitConfiguration.class
+com\rabbit\consumer\controllerDAO\MessageController.class
