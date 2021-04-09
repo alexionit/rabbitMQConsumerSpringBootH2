@@ -1,0 +1,1 @@
+# rabbitMQConsumerSpringBootH2
