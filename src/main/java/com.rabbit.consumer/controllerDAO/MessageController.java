@@ -15,8 +15,10 @@ public class MessageController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
+
     @Autowired
     MessageService service;
+
 
     @PostMapping(value= "/message/save")
     public String save(final @RequestBody @Valid Message message) {
@@ -25,6 +27,8 @@ public class MessageController {
         return message.getContent();
     }
 
+
+    // @GetMapping annotation handles the http get request matched with the given uri.
     @GetMapping(value= "/message/getall", produces= "application/vnd.jcg.api.v1+json")
     public List<Message> getAll() {
         log.info("Getting messages from the database.");
@@ -34,7 +38,16 @@ public class MessageController {
     @GetMapping("/message/getmessageid/{id}")
     private Message getMessage(@PathVariable("id") int id)
     {
+        log.info("Getting single message from the database by id.");
         return service.getMessageById(id);
+    }
+
+    @GetMapping("/message/getmessagecontent/{id}")
+    @ResponseBody
+    private String getMessageContent(@PathVariable("id") int id)
+    {
+        log.info("Getting single message from the database by id.");
+        return service.getMessageBodyById(id);
     }
 
 //    @RequestMapping("/error")

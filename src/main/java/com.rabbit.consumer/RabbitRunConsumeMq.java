@@ -11,8 +11,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@EnableAutoConfiguration
-@ComponentScan
+//@EnableAutoConfiguration
+//@ComponentScan
 //@ComponentScan({"com.rabbit.consumer.controllerDAO", "com.rabbit.consumer.serviceDAO", "com.rabbit.consumer.service"}) //load bean from start
 public class RabbitRunConsumeMq implements CommandLineRunner {
 

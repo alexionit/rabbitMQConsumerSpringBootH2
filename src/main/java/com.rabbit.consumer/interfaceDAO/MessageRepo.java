@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MessageRepo extends CrudRepository<Message, Integer>{
+//    using JPA to interact with the database
 }
